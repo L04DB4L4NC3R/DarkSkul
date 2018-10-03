@@ -4,4 +4,6 @@ Automated schooling for your loved ones
 <br />
 <br />
 
-![alt text]("./static/img/screenshot.png")
+
+<img src="static/img/prev.png" alt="preview" width="500"/>
+
