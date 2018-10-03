@@ -18,16 +18,24 @@ app.get("/",(req,res)=>{
 });
 
 app.post("/chatbot",(req,res)=>{
-    res.json({
-        speech: "...",  // ASCII characters only
-        displayText: "...",
-        data: {
-          google: {
-            expect_user_response: true,
-            is_ssml: true,
+    res.send({
+        "speech": "...",  // ASCII characters only
+        "displayText": "...",
+        "data": {
+          "google": {
+            "expect_user_response": true,
+            "is_ssml": true,
+            "permissions_request": {
+              "opt_context": "...",
+              "permissions": [
+                "NAME",
+                "DEVICE_COARSE_LOCATION",
+                "DEVICE_PRECISE_LOCATION"
+              ]
+            }
           }
         },
-        contextOut: ["hey"],
+        "contextOut": [...],
       });
 });
 
