@@ -35,7 +35,7 @@ app.post("/chatbot",(req,res)=>{
             }
           }
         },
-        "contextOut": [...],
+        "contextOut": ["hi"],
       });
 });
 
