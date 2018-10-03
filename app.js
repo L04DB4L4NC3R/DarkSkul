@@ -22,7 +22,20 @@ app.post("/chatbot",(req,res)=>{
         speech:'',
         displayText:'',
         source:'angad-backend',
-        messages:"Hello dialogflow"
+        messages:{
+            type: 1,
+            speech:"Here you go",
+            platform: 'facebook',
+            title: "title",
+            subtitle: "subtitle",
+            imageUrl: "noimg",
+            // buttons: [
+            //     {
+            //         text: 'Read more',
+            //         postback: post.link
+            //     }
+            // ]
+        }
     });
 });
 
