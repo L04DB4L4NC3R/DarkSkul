@@ -18,25 +18,12 @@ app.get("/",(req,res)=>{
 });
 
 app.post("/chatbot",(req,res)=>{
-    res.send({
-        "speech": "...",  // ASCII characters only
-        "displayText": "...",
-        "data": {
-          "google": {
-            "expect_user_response": true,
-            "is_ssml": true,
-            "permissions_request": {
-              "opt_context": "...",
-              "permissions": [
-                "NAME",
-                "DEVICE_COARSE_LOCATION",
-                "DEVICE_PRECISE_LOCATION"
-              ]
-            }
-          }
-        },
-        "contextOut": ["hi"],
-      });
+    res.status(200).send({
+        speech:'',
+        displayText:'',
+        source:'angad-backend',
+        messages:"Hello dialogflow"
+    });
 });
 
 
