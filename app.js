@@ -19,24 +19,25 @@ app.get("/",(req,res)=>{
 
 app.post("/chatbot",(req,res)=>{
     res.status(200).send({
-        speech:'',
-        displayText:'',
-        source:'angad-backend',
-        messages:{
-            type: 1,
-            speech:"Here you go",
-            platform: 'facebook',
-            title: "title",
-            subtitle: "subtitle",
-            imageUrl: "noimg",
-            // buttons: [
-            //     {
-            //         text: 'Read more',
-            //         postback: post.link
-            //     }
-            // ]
+        "fulfillmentText": "done",
+        "fulfillmentMessages": [
+          {
+            "message":"fmessage"
+          }
+        ],
+        "source": "angad-backend",
+        "payload": {
+          "payload":"payload"
+        },
+        "outputContexts": [
+          {
+            "outputC":"outputC"
+          }
+        ],
+        "followupEventInput": {
+          "followup":"I am following up"
         }
-    });
+      });
 });
 
 
