@@ -18,7 +18,17 @@ app.get("/",(req,res)=>{
 });
 
 app.post("/chatbot",(req,res)=>{
-    res.send("response received")
+    res.json({
+        speech: "...",  // ASCII characters only
+        displayText: "...",
+        data: {
+          google: {
+            expect_user_response: true,
+            is_ssml: true,
+          }
+        },
+        contextOut: ["hey"],
+      });
 });
 
 
