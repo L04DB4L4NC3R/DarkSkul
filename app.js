@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 });
 
 app.post("/chatbot",(req,res)=>{
-    res.json(req.body)
+    res.send("response received")
 });
 
 
