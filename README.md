@@ -4,4 +4,4 @@ Automated schooling for your loved ones
 <br />
 <br />
 
-[! alt text]("./static/img/screenshot.png")
+![preview]("./static/img/screenshot.png")
