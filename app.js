@@ -29,7 +29,7 @@ app.post("/chatbot",(req,res)=>{
         result = `loading class ${clas}th ${subject} from my data repository`;
 
     res.status(200).send({
-        "fulfillmentText":"Hello there from backend",
+        "fulfillmentText":`${result}`,
         "fulfillmentMessages":[{"text":{"text":[`${result}`]}}],
         "source":""
     });
