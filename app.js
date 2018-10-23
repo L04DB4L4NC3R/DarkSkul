@@ -25,7 +25,7 @@ app.post("/chatbot",(req,res)=>{
 
     let result = data[`${clas}_${subject}`];
     if(result)
-        result = result["chapter 1"];
+        result = result[`${chapter}`];
 
     if(!result)
         result = `trying to find material for class ${clas}th ${subject} ${chapter} from my data repository`;
