@@ -23,7 +23,9 @@ app.post("/chatbot",(req,res)=>{
     let params = req.body.queryResult.parameters;
     let subject = params.subject,clas = params.class,chapter=params.chapter;
 
-    let result = data[`${clas}_${subject}`][chapter];
+    let result = data[`${clas}_${subject}`];
+    if(result)
+        result = result[chapter];
 
     if(!result)
         result = `trying to find material for class ${clas}th ${subject} ${chapter} from my data repository`;
