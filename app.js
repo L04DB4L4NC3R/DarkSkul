@@ -24,7 +24,7 @@ app.post("/chatbot",(req,res)=>{
     let subject = params.subject,clas = params.class,chapter=params.chapter;
 
     let result = data[`${clas}_${subject}`];
-    console.log(chapter)
+    console.log(chapter.split(" "))
     if(result)
         result = result[`${chapter}`];
 
