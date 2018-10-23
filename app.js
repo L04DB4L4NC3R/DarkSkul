@@ -19,9 +19,8 @@ app.get("/",(req,res)=>{
 
 app.post("/chatbot",(req,res)=>{
     res.status(200).send({
-        queryResult:{
-            queryText:"Hey there from backend"
-        }
+        "fulfillmentText":"Hello there from backend",
+        "fulfillmentMessages":[{"text":{"text":"Hellore"}}]
     });
 });
 
