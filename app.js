@@ -3,6 +3,7 @@ const app = express();
 const hbs = require("express-hbs");
 const path = require("path");
 const bp = require("body-parser");
+const data = require("./data.json");
 
 app.use(bp.json());
 app.use(bp.urlencoded({extended:false}));
@@ -26,7 +27,7 @@ app.post("/chatbot",(req,res)=>{
 
     res.status(200).send({
         "fulfillmentText":"Hello there from backend",
-        "fulfillmentMessages":[{"text":{"text":[`${result}`]}}],
+        "fulfillmentMessages":[{"text":{"text":[`${data[result]}`]}}],
         "source":""
     });
 });
