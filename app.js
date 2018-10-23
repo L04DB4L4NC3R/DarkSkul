@@ -23,11 +23,14 @@ app.post("/chatbot",(req,res)=>{
     let params = req.body.queryResult.parameters;
     let subject = params.subject[0],clas = params.class;
 
-    let result = `${clas}_${subject}`;
+    let result = data[`${clas}_${subject}`];
+
+    if(!result)
+        result = `loading class ${clas}th ${subject} from my data repository`;
 
     res.status(200).send({
         "fulfillmentText":"Hello there from backend",
-        "fulfillmentMessages":[{"text":{"text":[`${data[result]}`]}}],
+        "fulfillmentMessages":[{"text":{"text":[`${result}`]}}],
         "source":""
     });
 });
