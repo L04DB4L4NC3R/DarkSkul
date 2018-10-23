@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 app.post("/chatbot",(req,res)=>{
     res.status(200).send({
         "fulfillmentText":"Hello there from backend",
-        "fulfillmentMessages":[{"text":{"text":"Hellore"}}],
+        "fulfillmentMessages":[{"text":{"text":["Hellore"]}}],
         "source":""
     });
 });
