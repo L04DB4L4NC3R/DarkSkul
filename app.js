@@ -21,12 +21,12 @@ app.get("/",(req,res)=>{
 app.post("/chatbot",(req,res)=>{
 
     let params = req.body.queryResult.parameters;
-    let subject = params.subject[0],clas = params.class;
+    let subject = params.subject,clas = params.class,chapter=params.chapter;
 
-    let result = data[`${clas}_${subject}`];
+    let result = data[`${clas}_${subject}`][chapter];
 
     if(!result)
-        result = `loading class ${clas}th ${subject} from my data repository`;
+        result = `trying to find material for class ${clas}th ${subject} ${chapter} from my data repository`;
 
     res.status(200).send({
         "fulfillmentText":`${result}`,

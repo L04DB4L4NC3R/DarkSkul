@@ -1,5 +1,6 @@
 {
-    "10_english":["A.J. Cronin has very well carved the idea of ‘selfless help ‘ ",
+    "10_english":{
+        "chapter 1":["A.J. Cronin has very well carved the idea of ‘selfless help ‘ ",
         "and explained the importance of dedication towards relationships in the story Two Gentlemen",
         "of Verona. The story revolves around the two boys named Nicola and Jacopo who do numerous",
         "things to earn money only to pay for their sister ‘s treatment who suffers from tuberculosis",
@@ -28,4 +29,5 @@
          "This story distinctly talks about how true the amplification says: “All that glitters is not",
          "gold,” in turn explaining the fact that appearances are deceptive."
     ]
+}
 }
