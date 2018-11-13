@@ -18,18 +18,23 @@ app.get("/",(req,res)=>{
     res.render("index",{name:"angad"});
 });
 
-app.post("/chatbot",(req,res)=>{
+// webhook fulfillment
+app.post("/chatbot",(req,res)=>{ 
 
+       // to extract parameters oout of spoken words
     let params = req.body.queryResult.parameters;
     let subject = params.subject,clas = params.class,chapter=params.chapter;
 
+    // to put the parameters as input to our data file
     let result = data[`${clas}_${subject}`];
     if(result)
         result = result[`chapter ${chapter[chapter.length-1]}`];
 
+   // if empty result then handle
     if(!result)
         result = `trying to find material for class ${clas}th ${subject} ${chapter} from my data repository`;
 
+       // send fullfillment 
     res.status(200).send({
         "fulfillmentText":`${result}`,
         "fulfillmentMessages":[{"text":{"text":[`${result}`]}}],
