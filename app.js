@@ -18,6 +18,16 @@ app.get("/",(req,res)=>{
     res.render("index",{name:"angad"});
 });
 
+
+app.get("/2",(req,res)=>{
+    res.render("index2",{name:"angad"});
+});
+
+
+app.get("/3",(req,res)=>{
+    res.render("index3",{name:"angad"});
+});
+
 // webhook fulfillment
 app.post("/chatbot",(req,res)=>{ 
 
